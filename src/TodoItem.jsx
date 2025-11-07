@@ -1,6 +1,6 @@
 import { Trash } from "lucide-react";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, onDelete }) => {
   return (
     <div>
       <li className="p-3">
@@ -25,7 +25,7 @@ const TodoItem = ({ todo }) => {
               {todo.Priorite}
             </span>
           </div>
-          <button className="btn btn-sm btn-error btn-soft">
+          <button className="btn btn-sm btn-error btn-soft" onClick={onDelete}>
             <Trash className="w-4 h-4"/>
           </button>
         </div>
